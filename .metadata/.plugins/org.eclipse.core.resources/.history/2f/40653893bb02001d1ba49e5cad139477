@@ -1,0 +1,5 @@
+package com.diogo.register.mvc.dao;
+
+public class DepartamentoDaoImpl extends AbstractDao<Departamento, Long> {
+
+}

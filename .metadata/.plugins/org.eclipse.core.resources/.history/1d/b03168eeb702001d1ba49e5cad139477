@@ -1,0 +1,20 @@
+package com.diogo.register.mvc.domain;
+
+import javax.persistence.*;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "ENDERECOS")
+public class Endereco extends AbstractEntity<Long> {
+
+	@Column(nullable = false)
+	private String logradouro;
+	
+	@Column(nullable = false)
+	private String bairro;
+	
+	@Column(nullable = false)
+	private String cidade;
+	
+	private UF uf;
+}

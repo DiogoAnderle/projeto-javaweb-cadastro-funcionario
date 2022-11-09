@@ -1,0 +1,7 @@
+package com.diogo.register.mvc.dao;
+
+import com.diogo.register.mvc.domain.Funcionario;
+
+public class FuncionarioDaoImpl extends AbstractDao<Funcionario, Long> implements FuncionarioDao {
+
+}

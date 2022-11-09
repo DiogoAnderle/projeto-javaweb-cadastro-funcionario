@@ -1,0 +1,25 @@
+package com.diogo.register.mvc.service;
+
+import java.util.List;
+
+import com.diogo.register.mvc.domain.Cargo;
+import com.diogo.register.mvc.util.PaginationUtil;
+
+public interface CargoService {
+	void salvar(Cargo cargo);
+	
+	void editar(Cargo cargo);
+	
+	void excluir(Long id);
+	
+	Cargo buscarPorId(Long id);
+	
+	List<Cargo> buscarPorNome(String nome);
+	
+	List<Cargo> buscarTodos();
+
+	boolean cargoTemFuncionario(Long id);
+	
+	PaginationUtil<Cargo> buscarPorPagina(int pagina);
+
+}

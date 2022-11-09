@@ -1,0 +1,12 @@
+package com.diogo.register.mvc.util;
+
+import java.util.List;
+
+public class PaginationUtil<T> {
+	
+	private int tamanho;
+	private int pagina;
+	private long totalDePaginas;
+	private List<T> registros;
+
+}

@@ -1,0 +1,35 @@
+package com.diogo.register.mvc.web.validator;
+ 
+import java.util.List;
+ 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+ 
+import com.diogo.register.mvc.dao.CargoDao;
+import com.diogo.register.mvc.domain.Cargo;
+ 
+public class CargoValidator implements Validator{
+ 
+	@Autowired
+	private CargoDao dao;
+ 
+	@Override
+	public boolean supports(Class<?> clazz) {
+		return Cargo.class.equals(clazz);
+	}
+ 
+	@Override
+	public void validate(Object object, Errors errors) {
+ 
+		Cargo c = (Cargo) object;
+		
+		String nome = c.getNome();
+		
+		List<Cargo> cargos = dao.findByNome(nome);
+		
+		if (cargos.size() > 0) {
+			errors.rejectValue("nome", "Cargo.ja.existe");
+		}
+	}
+} 

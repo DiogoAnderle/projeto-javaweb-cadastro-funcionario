@@ -1,0 +1,23 @@
+package com.diogo.register.mvc.service;
+
+import java.util.List;
+
+import com.diogo.register.mvc.domain.Cargo;
+
+public interface CargoService {
+	void salvar(Cargo cargo);
+	
+	void editar(Cargo cargo);
+	
+	void excluir(Long id);
+	
+	Cargo buscarPorId(Long id);
+	
+	List<Cargo> buscarPorNome(String nome);
+	
+	List<Cargo> buscarTodos();
+
+	boolean cargoTemFuncionario(Long id);
+
+	List<Cargo> buscarPorNome();
+}

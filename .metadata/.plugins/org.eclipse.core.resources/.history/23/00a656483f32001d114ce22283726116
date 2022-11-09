@@ -1,0 +1,8 @@
+package com.diogo.register.mvc.util;
+
+public class PaginationUtil<T> {
+	
+	private int tamanho;
+	private int pagina;
+
+}

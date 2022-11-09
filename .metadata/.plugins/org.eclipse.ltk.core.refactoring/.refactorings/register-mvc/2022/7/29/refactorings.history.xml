@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.diogo.register.mvc.domain.AbastractEntity&apos; to &apos;AbstractEntity&apos;&#x0D;&#x0A;- Original project: &apos;register-mvc&apos;&#x0D;&#x0A;- Original element: &apos;com.diogo.register.mvc.domain.AbastractEntity&apos;&#x0D;&#x0A;- Renamed element: &apos;com.diogo.register.mvc.domain.AbstractEntity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AbastractEntity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.diogo.register.mvc.domain{AbastractEntity.java[AbastractEntity" matchStrategy="1" name="AbstractEntity" qualified="false" references="true" similarDeclarations="false" stamp="1657681669965" textual="false" version="1.0"/>
+</session>

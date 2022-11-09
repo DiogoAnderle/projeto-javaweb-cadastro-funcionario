@@ -1,0 +1,5 @@
+package com.diogo.register.mvc.domain;
+
+public class Cargo extends AbstractEntity<Long> {
+
+}

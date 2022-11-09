@@ -1,0 +1,5 @@
+package com.diogo.register.mvc.dao;
+
+public interface DepartamentoDao {
+
+}

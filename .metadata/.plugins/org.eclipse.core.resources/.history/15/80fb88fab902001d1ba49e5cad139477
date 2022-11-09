@@ -1,0 +1,9 @@
+# MYSQL
+spring.datasource.url=jdbc:mysql://localhost:3306/register_mvc?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=1@b&1database
+
+# JPA
+spring.jpa.hubernate.ddl-auto=update
+spring.jpa.show=true
+spring.jpa.open-in-view=true

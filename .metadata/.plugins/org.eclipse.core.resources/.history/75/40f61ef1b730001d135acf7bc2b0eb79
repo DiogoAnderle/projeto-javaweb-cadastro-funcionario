@@ -1,0 +1,39 @@
+package com.diogo.register.mvc.web.validator;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+import com.diogo.register.mvc.domain.Cargo;
+import com.diogo.register.mvc.domain.Funcionario;
+import com.diogo.register.mvc.service.CargoService;
+
+public class CargoValidator implements Validator{
+
+
+	public CargoValidator(CargoService cargoService) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		
+		return Cargo.class.equals(clazz);
+	}
+
+	@Override
+	public void validate(Object object, Errors errors) {
+		
+		CargoService service = (CargoService) object;
+		
+		List<Cargo> cargos = service.();
+		
+		
+			}
+		}
+		
+	}
+
+}

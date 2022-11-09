@@ -1,0 +1,22 @@
+package com.diogo.register.mvc.web.validator;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+import com.diogo.register.mvc.domain.Departamento;
+
+public class DepartamentoValidator implements Validator {
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		// TODO Auto-generated method stub
+		return Departamento.class.equals(clazz);;
+	}
+
+	@Override
+	public void validate(Object object, Errors errors) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

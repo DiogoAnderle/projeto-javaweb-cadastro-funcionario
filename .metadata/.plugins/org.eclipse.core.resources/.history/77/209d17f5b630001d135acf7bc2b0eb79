@@ -1,0 +1,16 @@
+package com.diogo.register.mvc.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.diogo.register.mvc.domain.Cargo;
+
+@Repository
+public class CargoDaoImpl extends AbstractDao<Cargo, Long> implements CargoDao {
+public List<Cargo> findByNome(String nome) {
+		
+		return createQuery("select c from Cargo c where c.nome like concat('%',?1,'%') ", nome);
+	}
+
+}

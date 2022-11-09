@@ -1,0 +1,7 @@
+package com.diogo.register.mvc.dao;
+
+import com.diogo.register.mvc.domain.Cargo;
+
+public class CargoDaoImpl extends AbstractDao<Cargo, Long> implements CargoDao{
+
+}

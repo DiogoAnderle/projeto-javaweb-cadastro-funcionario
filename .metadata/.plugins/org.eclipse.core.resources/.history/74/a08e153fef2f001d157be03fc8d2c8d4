@@ -1,0 +1,33 @@
+package com.diogo.register.mvc.web.error;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorViewResolver;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.ModelAndView;
+
+@Component
+public class MyErrorView implements ErrorViewResolver {
+
+	@Override
+	public ModelAndView resolveErrorView(HttpServletRequest request, HttpStatus status, Map<String, Object> map) {
+		
+		ModelAndView model = new ModelAndView("/error");
+		model.addObject("status", status.value())
+		
+		switch (status.value()) {
+		case 404: {
+			
+			yield type;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + key);
+		}
+		
+		return model;
+	}
+
+}

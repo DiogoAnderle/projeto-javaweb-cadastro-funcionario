@@ -1,0 +1,9 @@
+{
+    "java.compile.nullAnalysis.nonnull": [
+
+        "javax.annotation.Nonnull",
+        "org.eclipse.jdt.annotation.NonNull",
+        "org.springframework.lang.NonNull"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

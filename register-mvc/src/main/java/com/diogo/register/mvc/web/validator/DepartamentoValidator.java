@@ -1,0 +1,43 @@
+package com.diogo.register.mvc.web.validator;
+
+import java.util.List;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+import com.diogo.register.mvc.domain.Departamento;
+import com.diogo.register.mvc.service.DepartamentoService;
+
+public class DepartamentoValidator implements Validator {
+	
+	private DepartamentoService departamentoService;
+
+	public DepartamentoValidator(DepartamentoService departamentoService) {
+		this.departamentoService = departamentoService;
+	}
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		// TODO Auto-generated method stub
+		return Departamento.class.equals(clazz);
+	}
+
+	@Override
+	public void validate(Object object, Errors errors) {
+		
+		
+		Departamento d = (Departamento) object;
+		
+		String nome = d.getNome();
+		Long id = d.getId();
+		
+		List<Departamento> departamentos = departamentoService.buscarPorNome(nome);
+		
+		if (departamentos != null && id == null) {
+			if (departamentos.size() > 0) {
+				errors.rejectValue("nome", "Departamento.ja.existe");
+			}
+
+		}
+	}
+}
